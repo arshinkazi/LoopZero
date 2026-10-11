@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LoopZero | Repeated sightings are evidence</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+:root{--forest:#12301f;--forest2:#1d4630;--ivory:#f6f1e4;--card:#fffdf6;--sage:#a9b8a0;--sage2:#dfe6d6;--lime:#c6f432;--ink:#14241a;--mute:#566457;--line:#d6dccb;--red:#a3341f;--amber:#9a6a00;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}body{margin:0;background:var(--ivory);color:var(--ink);font:16px/1.55 'Instrument Sans',system-ui,sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.1;margin:0}
+a{color:inherit}.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--forest);outline-offset:2px;border-radius:6px}
+header.top{background:var(--forest);color:var(--ivory)}header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;flex-wrap:wrap}
+.logo{font-family:Fraunces,serif;font-size:22px;text-decoration:none;font-weight:600}.logo b{color:var(--lime)}
+nav a{margin-left:16px;text-decoration:none;font-size:15px}nav a:hover{color:var(--lime)}
+.btn{display:inline-block;border:1.5px solid var(--forest);background:var(--forest);color:var(--ivory);padding:11px 20px;border-radius:999px;font:600 15px inherit;font-family:inherit;cursor:pointer;text-decoration:none}
+.btn.lime{background:var(--lime);color:var(--forest);border-color:var(--lime)}.btn.ghost{background:transparent;color:inherit;border-color:currentColor}.btn.sm{padding:7px 14px;font-size:14px}
+.btn:hover{filter:brightness(1.08)}
+.hero{background:var(--forest);color:var(--ivory);padding:48px 0 64px}.hero .wrap{display:grid;gap:32px;grid-template-columns:1.2fr .8fr;align-items:center}
+.hero h1{font-size:clamp(34px,5.5vw,58px)}.hero p{color:var(--sage2);max-width:46ch;font-size:18px}.tag{font-family:Fraunces,serif;font-style:italic;color:var(--lime);font-size:18px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:-32px 0 8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}
+.how .card p{margin:6px 0 0;color:var(--mute);font-size:14px}
+section{padding:28px 0}h2{font-size:30px;margin-bottom:14px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.stat b{font:600 36px Fraunces,serif;display:block}.stat span{color:var(--mute);font-size:14px}
+.bar{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+select,input,textarea{font:inherit;padding:10px 12px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);width:100%}
+.bar select{width:auto;min-width:140px}label{font-weight:600;font-size:14px;display:block;margin:14px 0 5px}.err{color:var(--red);font-size:13px;min-height:18px}
+.hs{display:grid;grid-template-columns:64px 1fr auto;gap:14px;align-items:center;text-decoration:none;margin-bottom:10px}.hs:hover{border-color:var(--forest)}
+.score{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font:600 22px Fraunces,serif;background:var(--sage2);border:3px solid var(--forest)}
+.score.hi{background:var(--lime)}.score.off{background:#e8ebe2;border-color:var(--sage);color:var(--mute)}.pill{display:inline-block;font-size:12.5px;padding:2px 10px;border-radius:99px;background:var(--sage2);margin:2px 4px 2px 0;font-weight:500}
+.pill.demo{background:#fff3c4;color:#6b4e00}.pill.high{background:#f6d5cd;color:var(--red)}.pill.res{background:var(--forest);color:var(--ivory)}.pill.dup{background:#fde6bd;color:var(--amber)}
+.hs h3{font-size:19px}.hs small{color:var(--mute)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}.row{display:flex;align-items:center;gap:10px;margin:8px 0;font-size:14px}.row i{display:block;height:12px;border-radius:6px;background:var(--forest)}.row span:first-child{width:150px;flex:none}
+.tl{border-left:3px solid var(--sage);margin:12px 0 0 8px;padding-left:18px}.tl>div{margin-bottom:16px;position:relative}.tl>div:before{content:"";position:absolute;left:-26px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--lime);border:3px solid var(--forest)}
+.tl img{max-width:200px;border-radius:10px;display:block;margin-top:6px}
+.parts div{display:grid;grid-template-columns:110px 1fr 60px;gap:8px;align-items:center;font-size:14px;margin:6px 0}.parts i{height:10px;background:var(--sage2);border-radius:5px;display:block}.parts u{display:block;height:100%;background:var(--forest);border-radius:5px}
+.disc{font-size:13px;color:var(--mute);border-top:1px solid var(--line);margin-top:30px;padding:18px 0 40px}
+.toast{background:#fff3c4;border-radius:12px;padding:10px 14px;font-size:14px;margin:10px 0}
+@media(max-width:760px){.hero .wrap,.grid2,.how{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.hs{grid-template-columns:52px 1fr}.hs>.go{grid-column:1/-1}.score{width:52px;height:52px;font-size:18px}.how{margin-top:16px}}
+@media(prefers-reduced-motion:no-preference){.ring{animation:pulse 3.2s ease-in-out infinite}@keyframes pulse{50%{opacity:.35}}}
+@media print{header.top,.noprint,.disc button,.hero{display:none!important}body{background:#fff}.card{border:1px solid #999}}
+</style></head><body>
+<header class="top"><div class="wrap"><a class="logo" href="#/">Loop<b>Zero</b></a>
+<nav aria-label="Main"><a href="#/">Dashboard</a><a href="#/overview">Overview</a><a href="#/report">Report an issue</a></nav></div></header>
+<div id="notice" class="toast wrap" role="status" hidden></div>
+<main id="app" class="wrap" tabindex="-1"></main>
+<footer class="wrap disc">LoopZero shows community observations, not verified environmental or medical assessments. The LoopZero priority score is a transparent ranking aid, not an official urgency or health risk rating. Reports are stored only in this browser. Nothing is sent to any municipal authority. Items marked DEMO DATA are fictional.
+<br><button class="btn ghost sm" id="reset" style="margin-top:10px;color:var(--ink)">Reset demo data</button></footer>
+<script>
+"use strict";
+/* ---------- Config: edit weights here. Score = 100 * sum(w*factor)/sum(w) ---------- */
+const WEIGHTS={persistence:.25,recurrence:.25,severity:.5}, CAPS={days:30,obs:6}, SEV={low:1,medium:2,high:3};
+const TYPES={garbage:'Garbage accumulation',drain:'Open drain / stagnant wastewater',leak:'Water leakage',dust:'Excessive dust',other:'Other environmental issue'};
+const LOCS=['Fatehpur Shekhawati','Ramgarh Shekhawati','Lachhmangarh'];
+const KEY='loopzero.v1', DAY=864e5;
+
+/* ---------- Utilities ---------- */
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const iso=o=>new Date(Date.now()-o*DAY).toISOString().slice(0,10);
+const daysBetween=(a,b)=>Math.max(0,Math.floor((new Date(b)-new Date(a))/DAY));
+const norm=s=>String(s||'').toLowerCase().replace(/[^a-z0-9 ]/g,' ').replace(/\s+/g,' ').trim();
+/** Grouping rule users can verify: normalized locality + category + landmark. */
+const keyOf=o=>[norm(o.locality),o.type,norm(o.landmark)].join('|');
+const validDate=d=>/^\d{4}-\d{2}-\d{2}$/.test(d)&&!isNaN(Date.parse(d));
+const sevOf=v=>SEV[v]||1, sameLoc=(a,b)=>norm(a)===norm(b), dec=v=>{try{return decodeURIComponent(v)}catch(e){return ''}};
+const notice=m=>{const n=$('#notice');n.textContent=m;n.hidden=!m};
+/** Default localities plus any found in saved observations, deduplicated by normalized name. */
+function localities(){const m=new Map();[...LOCS,...store.obs.map(o=>o.locality)].forEach(l=>{const n=norm(l);if(n&&!m.has(n))m.set(n,l)});return [...m.values()]}
+
+/* ---------- Storage ---------- */
+function seed(){
+  const S=(n,t,loc,lm,sev,d,desc)=>({id:'DEMO-'+Math.random().toString(36).slice(2,7),demo:true,type:t,locality:loc,landmark:lm,severity:sev,date:iso(n),desc:d||desc,photo:null});
+  const F=LOCS[0],o=[
+    S(22,'drain',F,'Lane behind Sabzi Mandi','medium','Drain uncovered, slow black water near the shops.'),
+    S(15,'drain',F,'Lane behind Sabzi Mandi','medium','Still stagnant. Mosquitoes visible in the evening.'),
+    S(8,'drain',F,'Lane behind Sabzi Mandi','high','Overflowing onto the lane after rain.'),
+    S(1,'drain',F,'Lane behind Sabzi Mandi','high','Strong smell, water has spread across the lane.'),
+    S(1,'drain',F,'Lane behind Sabzi Mandi','high','Water across the lane again, smell is worse.'),
+    S(12,'garbage',F,'Bus stand roadside','medium','Waste pile growing beside the wall.'),
+    S(9,'garbage',F,'Bus stand roadside','medium','Not cleared. Animals scattering waste.'),
+    S(3,'garbage',F,'Bus stand roadside','medium','Pile now reaches the footpath.'),
+    S(1,'leak','Fatehpur Shekhawati','Near Ward 7 water tank','low','Pipe joint leaking steadily.'),
+    S(26,'dust',F,'Brick kiln road','medium','Heavy dust on the road from trucks.'),
+    S(18,'dust',F,'Brick kiln road','medium','Dust again. Water sprinkling not seen.'),
+    S(14,'dust',F,'Brick kiln road','low','Road sprinkled today. Dust lower.'),
+    S(5,'garbage',LOCS[1],'Market chowk','high','Large dump near the chowk.')];
+  return {obs:o,status:{[keyOf(o[9])]:'resolved'}};
+}
+/** Repairs saved data so bad values never break scoring or rendering. */
+function clean(x){x.obs=x.obs.filter(o=>o&&typeof o==='object').map(o=>({...o,type:TYPES[o.type]?o.type:'other',severity:SEV[o.severity]?o.severity:'low',locality:String(o.locality||'Unknown locality'),landmark:String(o.landmark||'Unspecified'),desc:String(o.desc||''),date:validDate(o.date)&&o.date<=iso(0)?o.date:null}));
+  x.status=x.status&&typeof x.status==='object'?x.status:{};return x}
+const load=()=>{try{const x=JSON.parse(localStorage.getItem(KEY));return x&&Array.isArray(x.obs)?clean(x):seed()}catch(e){return seed()}};
+let store=load();
+/** Persists the store. Returns false and shows a notice when storage is full or unavailable. */
+function save(){try{localStorage.setItem(KEY,JSON.stringify(store));notice('');return true}catch(e){notice('Browser storage is full or unavailable. Recent changes may be lost on refresh. Export the CSV to keep a copy.');return false}}
+save();
+
+/* ---------- Hotspot engine ---------- */
+/** Groups observations and scores each hotspot.
+ * Reports on the same date, with the same text, or with no valid date are flagged and not counted.
+ * Span = days between first and latest counted observation. Age = days from first observation to today. */
+function buildHotspots(){
+  const m={},W=Object.values(WEIGHTS).reduce((a,b)=>a+b,0),today=iso(0);
+  [...store.obs].sort((a,b)=>(a.date||'').localeCompare(b.date||'')).forEach(o=>(m[keyOf(o)]??=[]).push(o));
+  return Object.entries(m).map(([key,list])=>{
+    const dates=new Set(),descs=new Set();
+    list.forEach(o=>{const d=norm(o.desc);
+      o.dupReason=!o.date?'Missing or invalid date':dates.has(o.date)?'Same date as an earlier report':descs.has(d)?'Same text as an earlier report':null;
+      if(o.date)dates.add(o.date);descs.add(d)});
+    const real=list.filter(o=>!o.dupReason),dated=list.filter(o=>o.date),f=list[0],basis=real.length?real:list;
+    const first=dated[0]?.date||null,last=dated[dated.length-1]?.date||null;
+    const span=real.length?daysBetween(real[0].date,real[real.length-1].date):0,age=first?daysBetween(first,today):0,sinceLast=last?daysBetween(last,today):0;
+    const sev=Math.max(...basis.map(o=>sevOf(o.severity)));
+    const factors={persistence:Math.min(span,CAPS.days)/CAPS.days,recurrence:Math.min(real.length,CAPS.obs)/CAPS.obs,severity:sev/3};
+    const score=Math.max(0,Math.min(100,Math.round(100*Object.keys(WEIGHTS).reduce((t,k)=>t+WEIGHTS[k]*factors[k],0)/W)));
+    const sevName=Object.keys(SEV).find(k=>SEV[k]===sev),pc=k=>Math.round(WEIGHTS[k]/W*100);
+    return {key,type:f.type,locality:f.locality,landmark:f.landmark,obs:list,distinct:real.length,submitted:list.length,span,age,sinceLast,sevName,factors,score,
+      first,last,status:store.status[key]||'open',demo:list.every(o=>o.demo),
+      why:`${real.length} counted observation${real.length!==1?'s':''} out of ${list.length} submitted, spread over a ${span}-day span. Highest counted severity: ${sevName}. Weights: severity ${pc('severity')}%, observation span ${pc('persistence')}%, recurrence ${pc('recurrence')}%. A single observation earns no span credit.`};
+  }).sort((a,b)=>(a.status==='resolved')-(b.status==='resolved')||b.score-a.score);
+}
+const scoreCls=h=>h.status==='resolved'?'off':h.score>=60?'hi':'';
+/* ---------- Views ---------- */
+const filt={loc:LOCS[0],type:'',sev:'',status:''};let photoP=null,hsCache=[];
+const opts=(o,sel,all)=>(all?`<option value="">${all}</option>`:'')+Object.entries(o).map(([k,v])=>`<option value="${esc(k)}" ${k===sel?'selected':''}>${esc(v)}</option>`).join('');
+const pills=h=>`${h.demo?'<span class="pill demo">DEMO DATA</span>':''}<span class="pill ${h.sevName==='high'?'high':''}">${h.sevName} severity</span><span class="pill ${h.status==='resolved'?'res':''}">${h.status.replace('review','under review').replace('open','Open').replace('resolved','Resolved')}</span>`;
+
+function heroSvg(){return `<svg viewBox="0 0 320 260" role="img" aria-label="Schematic of repeated sightings growing into one hotspot" style="width:100%"><g fill="none" stroke="#c6f432">${[110,80,50].map((r,i)=>`<circle class="ring" cx="160" cy="130" r="${r}" stroke-opacity="${.3+i*.25}" style="animation-delay:${i*.5}s"/>`).join('')}</g>
+<g fill="#c6f432"><circle cx="160" cy="130" r="14"/><circle cx="118" cy="98" r="6"/><circle cx="205" cy="110" r="6"/><circle cx="190" cy="170" r="6"/><circle cx="125" cy="165" r="6"/></g><text x="160" y="240" fill="#dfe6d6" font-size="13" text-anchor="middle" font-family="Instrument Sans">Four sightings, one lane, one hotspot</text></svg>`}
+
+function home(){
+  const all=buildHotspots(),list=all.filter(h=>(!filt.loc||sameLoc(h.locality,filt.loc))&&(!filt.type||h.type===filt.type)&&(!filt.sev||h.sevName===filt.sev)&&(!filt.status||h.status===filt.status));
+  const scope=all.filter(h=>!filt.loc||sameLoc(h.locality,filt.loc)),open=scope.filter(h=>h.status!=='resolved');
+  const recent=[...store.obs].filter(o=>!filt.loc||sameLoc(o.locality,filt.loc)).sort((a,b)=>b.date.localeCompare(a.date)).slice(0,6);
+  return `<div style="margin:0 -20px"><div class="hero"><div class="wrap"><div><p class="tag">One sighting is a signal. Repeated sightings are evidence.</p>
+<h1>Your neighbourhood deserves better than another ignored complaint.</h1><p>LoopZero connects repeated environmental observations into evidence that demands attention.</p>
+<div class="cta"><a class="btn lime" href="#/report">Report an issue</a><a class="btn ghost" href="#hotspots" onclick="document.getElementById('hotspots').scrollIntoView();return false">Explore hotspots</a></div></div>${heroSvg()}</div></div></div>
+<div class="how"><div class="card"><h3>Report</h3><p>Add what you see, where, and how bad it is. No login needed.</p></div><div class="card"><h3>Match</h3><p>Reports with the same locality, category and landmark join one hotspot.</p></div><div class="card"><h3>Prove</h3><p>Persistence, recurrence and severity form a score and a printable evidence report.</p></div></div>
+<section id="hotspots"><h2>Environmental dashboard</h2>
+<div class="stats"><div class="card stat"><b>${open.length}</b><span>Open hotspots</span></div><div class="card stat"><b>${open.filter(h=>h.distinct>=2).length}</b><span>Observed repeatedly</span></div><div class="card stat"><b>${open.filter(h=>h.score>=60).length}</b><span>High priority (score 60+)</span></div><div class="card stat"><b>${scope.filter(h=>h.status==='resolved').length}</b><span>Resolved</span></div></div>
+<div class="bar" role="group" aria-label="Filters"><select id="fLoc" aria-label="Locality"><option value="">All localities</option>${localities().map(l=>`<option ${sameLoc(l,filt.loc)?'selected':''}>${esc(l)}</option>`).join('')}</select>
+<select id="fType" aria-label="Issue type">${opts(TYPES,filt.type,'All issue types')}</select><select id="fSev" aria-label="Severity">${opts({low:'Low',medium:'Medium',high:'High'},filt.sev,'All severities')}</select>
+<select id="fStatus" aria-label="Status">${opts({open:'Open',review:'Under review',resolved:'Resolved'},filt.status,'All statuses')}</select><a class="btn sm" href="#/report">Report an issue</a><button class="btn ghost sm" id="csv" style="color:var(--ink)">Export CSV</button></div>
+${list.length?list.map(h=>`<a class="card hs" href="#/h/${encodeURIComponent(h.key)}"><div class="score ${scoreCls(h)}" title="LoopZero priority score${h.status==='resolved'?' (resolved, not an active priority)':''}">${h.score}</div><div><h3>${esc(h.landmark)}</h3><small>${esc(TYPES[h.type])}, ${esc(h.locality)}</small><br>${pills(h)}<span class="pill">${h.distinct} counted${h.submitted>h.distinct?' of '+h.submitted+' submitted':''}</span></div><span class="go btn sm ghost" style="color:var(--ink)">View evidence</span></a>`).join(''):`<div class="card">No hotspots match these filters. Clear a filter or <a href="#/report"><b>report an issue</b></a>.</div>`}
+<h2 style="margin-top:30px">Recent activity</h2><div class="card">${recent.length?`<div class="tl">${recent.map(o=>`<div><b>${esc(o.date)}</b> ${esc(TYPES[o.type])} at ${esc(o.landmark)} ${o.demo?'<span class="pill demo">DEMO DATA</span>':''}<br><small>${esc(o.desc)}</small></div>`).join('')}</div>`:'No activity yet.'}</div></section>`;
+}
+
+function overview(){
+  const hs=buildHotspots(),cnt=(f,vals)=>vals.map(v=>[v,hs.filter(h=>f(h)===v).length]);
+  const bars=(rows,lab)=>{const mx=Math.max(1,...rows.map(r=>r[1]));return rows.map(r=>`<div class="row"><span>${esc(lab(r[0]))}</span><i style="width:${r[1]/mx*50+2}%"></i><b>${r[1]}</b></div>`).join('')};
+  const user=store.obs.filter(o=>!o.demo).length,locs=[...new Map(hs.map(h=>[norm(h.locality),h.locality])).values()];
+  return `<section><h2>Environmental overview</h2><p>${hs.length} hotspots from ${store.obs.length} observations. <span class="pill">${user} submitted by you</span><span class="pill demo">${store.obs.length-user} DEMO DATA</span></p>
+<div class="grid2"><div class="card"><h3>By issue type</h3>${bars(cnt(h=>h.type,Object.keys(TYPES)),k=>TYPES[k])}</div><div class="card"><h3>By status</h3>${bars(cnt(h=>h.status,['open','review','resolved']),k=>({open:'Open',review:'Under review',resolved:'Resolved'}[k]))}</div></div>
+<div class="card" style="margin-top:16px"><h3>By locality</h3>${bars(locs.map(l=>[l,hs.filter(h=>sameLoc(h.locality,l)).length]),k=>k)}</div>
+<div class="card" style="margin-top:16px"><h3>Schematic locality map</h3><p><small>Schematic only. Positions are not geographic coordinates.</small></p>
+<svg viewBox="0 0 600 ${Math.max(1,locs.length)*90}" style="width:100%" role="img" aria-label="Hotspots grouped by locality">${locs.map((l,i)=>`<text x="8" y="${i*90+24}" font-size="14" font-weight="600" fill="#12301f">${esc(l)}</text><line x1="8" x2="592" y1="${i*90+34}" y2="${i*90+34}" stroke="#d6dccb"/>`+hs.filter(h=>sameLoc(h.locality,l)).map((h,j)=>`<a href="#/h/${encodeURIComponent(h.key)}"><circle cx="${50+(j%8)*70}" cy="${i*90+62}" r="${10+h.score/6}" fill="${h.status==='resolved'?'#a9b8a0':h.score>=60?'#c6f432':'#dfe6d6'}" stroke="#12301f" stroke-width="2"><title>${esc(h.landmark)}, score ${h.score}</title></circle></a>`).join('')).join('')}</svg></div></section>`;
+}
+
+function reportForm(prefKey){
+  const hs=hsCache=buildHotspots(),p=prefKey?hs.find(h=>h.key===prefKey):null;photoP=null;
+  return `<section><h2>${p?'Add an observation':'Report an issue'}</h2><form id="rf" class="card" novalidate style="max-width:640px">
+<label for="hsel">Existing hotspot</label><select id="hsel"><option value="">New hotspot (none of these fits)</option>${hs.map(h=>`<option value="${esc(h.key)}" ${p&&h.key===p.key?'selected':''}>${esc(h.landmark)}, ${esc(TYPES[h.type])}, ${esc(h.locality)}</option>`).join('')}</select>
+<small>Picking one fills the three fields below. Reports join a hotspot only when locality, category and landmark match exactly after lowercasing and removing punctuation, so a differently spelled landmark makes a separate hotspot.</small>
+<label for="type">Issue type</label><select id="type">${opts(TYPES,p?.type)}</select>
+<label for="loc">Locality</label><input id="loc" list="ll" value="${esc(p?.locality||filt.loc||LOCS[0])}"><datalist id="ll">${localities().map(l=>`<option value="${esc(l)}">`).join('')}</datalist>
+<label for="lm">Landmark or lane</label><input id="lm" value="${esc(p?.landmark||'')}" placeholder="e.g. Lane behind Sabzi Mandi"><div class="err" id="e1"></div>
+<label>Coordinates (optional)</label><button type="button" class="btn ghost sm" id="geo" style="color:var(--ink)">Use my location</button> <small id="gs"></small><input type="hidden" id="coords">
+<label for="sev">Severity</label><select id="sev">${opts({low:'Low',medium:'Medium',high:'High'},'medium')}</select>
+<label for="desc">Description</label><textarea id="desc" rows="4" placeholder="What did you see? (at least 15 characters)"></textarea><div class="err" id="e2"></div>
+<label for="photo">Photograph (optional)</label><input id="photo" type="file" accept="image/*"><div id="pv"></div>
+<label for="date">Date observed</label><input id="date" type="date" max="${iso(0)}" value="${iso(0)}"><div class="err" id="e3"></div>
+<button class="btn" type="submit" style="margin-top:12px">Save report</button></form></section>`;
+}
+
+function detail(key){
+  const h=buildHotspots().find(x=>x.key===key);
+  if(!h)return `<section><div class="card">Hotspot not found. <a href="#/">Back to dashboard</a></div></section>`;
+  const parts=Object.keys(WEIGHTS).map(k=>`<div><span>${{persistence:'Observation span',recurrence:'Recurrence',severity:'Severity'}[k]}</span><i><u style="width:${h.factors[k]*100}%"></u></i><b>${Math.round(h.factors[k]*100)}%</b></div>`).join('');
+  return `<section><a href="#/" class="noprint">Back to dashboard</a><h2 style="margin-top:10px">${esc(h.landmark)}</h2><p>${esc(TYPES[h.type])}, ${esc(h.locality)}<br><small>Hotspot ID: ${esc(h.key)}</small></p>${pills(h)}
+<div class="grid2" style="margin-top:14px"><div class="card"><div style="display:flex;gap:14px;align-items:center"><div class="score ${scoreCls(h)}">${h.score}</div><div><b>LoopZero priority score (0 to 100)</b><br><small>${esc(h.why)}</small></div></div><div class="parts" style="margin-top:10px">${parts}</div>
+<small>Formula: 100 x (${Object.entries(WEIGHTS).map(([k,v])=>v+' x '+k).join(' + ')}) / ${Object.values(WEIGHTS).reduce((a,b)=>a+b,0)}. Observation span (days between first and latest counted observation) caps at ${CAPS.days}, recurrence (counted observations) at ${CAPS.obs}. Severity is the highest among counted observations. Reports on the same date or with the same text are flagged and not counted.</small></div>
+<div class="card"><p><b>First observed:</b> ${h.first||'n/a'}<br><b>Latest observed:</b> ${h.last||'n/a'} (${h.sinceLast} days ago)<br><b>Observation span:</b> ${h.span} days, first to latest counted<br><b>Age since first observation:</b> ${h.age} days<br><b>Observations:</b> ${h.distinct} counted of ${h.submitted} submitted<br><b>Highest severity:</b> ${h.sevName}</p><p><small>Repeated observations show recurrence. The span shows how long reports continued and does not prove the problem remains today. Confirm on site before acting${h.sinceLast>14?'; the latest observation is '+h.sinceLast+' days old':''}.${h.status==='resolved'?' This hotspot is marked resolved and is not counted as an active priority.':''}</small></p>
+<label for="st">Status</label><select id="st" class="noprint" data-k="${esc(h.key)}">${opts({open:'Open',review:'Under review',resolved:'Resolved'},h.status)}</select>
+<div class="cta noprint"><a class="btn sm" href="#/report?hs=${encodeURIComponent(h.key)}">Add observation</a><button class="btn ghost sm" id="print" style="color:var(--ink)">Print evidence report</button><button class="btn ghost sm" id="csv1" data-k="${esc(h.key)}" style="color:var(--ink)">Export CSV</button></div></div></div>
+<h3 style="margin-top:24px">Evidence timeline</h3><div class="tl">${h.obs.map(o=>`<div><b>${o.date}</b> ${o.severity} severity ${o.demo?'<span class="pill demo">DEMO DATA</span>':''}${o.dupReason?`<span class="pill dup" title="Not counted in recurrence">Review: ${esc(o.dupReason)}</span>`:''}<br>${esc(o.desc)}<br><small>Case ${esc(o.id)}${o.coords?', coordinates '+esc(o.coords):''}${o.photo?', file '+esc(o.photo.name):''}</small>${o.photo&&/^data:image\//.test(o.photo.thumb||'')?`<img src="${o.photo.thumb}" alt="Submitted photo ${esc(o.photo.name)}">`:''}</div>`).join('')}</div>
+<p><small>Community observations only. No authority has been notified through LoopZero.</small></p></section>`;
+}
+
+function success(id){
+  const o=store.obs.find(x=>x.id===id);if(!o)return '<section><div class="card">Report not found.</div></section>';
+  const h=buildHotspots().find(x=>x.key===keyOf(o));
+  return `<section><div class="card" style="max-width:640px"><h2>Report saved</h2><p>Case ID <b>${esc(id)}</b>. Saved in this browser only; nothing was sent to any authority.</p>
+<p>It joined the hotspot <b>${esc(h.landmark)}</b>, now ${h.distinct} counted observation${h.distinct>1?'s':''} (${h.submitted} submitted) with a LoopZero priority score of <b>${h.score}</b>.${o.dupReason?` <span class="pill dup">Flagged for review: ${esc(o.dupReason)}</span>`:''}</p>
+<div class="cta"><a class="btn" href="#/h/${encodeURIComponent(h.key)}">View hotspot</a><a class="btn ghost" style="color:var(--ink)" href="#/">Dashboard</a></div></div></section>`;
+}
+
+/* ---------- Actions ---------- */
+/** Builds a CSV download. Quotes are doubled and cells starting with = + - @ are neutralized. */
+function csv(rows){
+  const q=v=>{let t=String(v??'');if(/^[=+\-@\t\r]/.test(t))t="'"+t;return '"'+t.replace(/"/g,'""')+'"'};
+  const head=['hotspot_id','case_id','locality','landmark','category','date','severity','description','evidence_file','data_type','counted_toward_recurrence','review_flag'];
+  const body=rows.map(o=>[keyOf(o),o.id,o.locality,o.landmark,TYPES[o.type],o.date||'',o.severity,o.desc,o.photo?.name||'',o.demo?'DEMO':'user',o.dupReason?'no':'yes',o.dupReason||''].map(q).join(','));
+  const url=URL.createObjectURL(new Blob([head.join(',')+'\r\n'+body.join('\r\n')],{type:'text/csv'})),a=document.createElement('a');
+  a.href=url;a.download='loopzero-observations.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+/** Shrinks an image to a small JPEG data URL so localStorage stays usable. */
+function shrink(file){return new Promise(res=>{const r=new FileReader();r.onload=()=>{const i=new Image();i.onload=()=>{const s=Math.min(1,320/i.width),c=document.createElement('canvas');c.width=i.width*s;c.height=i.height*s;c.getContext('2d').drawImage(i,0,0,c.width,c.height);res({name:file.name,thumb:c.toDataURL('image/jpeg',.6)})};i.onerror=()=>res(null);i.src=r.result};r.onerror=()=>res(null);r.readAsDataURL(file)})}
+
+function wire(){
+  const on=(s,e,f)=>{const n=$(s);if(n)n.addEventListener(e,f)};
+  [['#fLoc','loc'],['#fType','type'],['#fSev','sev'],['#fStatus','status']].forEach(([s,k])=>on(s,'change',e=>{filt[k]=e.target.value;route()}));
+  on('#csv','click',()=>{const hs=buildHotspots().filter(h=>!filt.loc||sameLoc(h.locality,filt.loc));csv(hs.flatMap(h=>h.obs))});
+  on('#csv1','click',e=>csv(buildHotspots().find(h=>h.key===e.target.dataset.k).obs));
+  on('#print','click',()=>window.print());
+  on('#st','change',e=>{store.status[e.target.dataset.k]=e.target.value;save();route()});
+  on('#geo','click',()=>{const s=$('#gs');if(!navigator.geolocation){s.textContent='Location is not available. Enter the landmark instead.';return}
+    s.textContent='Waiting for permission...';navigator.geolocation.getCurrentPosition(p=>{$('#coords').value=p.coords.latitude.toFixed(5)+','+p.coords.longitude.toFixed(5);s.textContent='Location added.'},()=>{s.textContent='Location unavailable or denied. Enter the landmark instead.'},{timeout:10000})});
+  on('#hsel','change',e=>{const h=hsCache.find(x=>x.key===e.target.value);if(h){$('#type').value=h.type;$('#loc').value=h.locality;$('#lm').value=h.landmark}});
+  on('#photo','change',e=>{const f=e.target.files[0];photoP=f?shrink(f):null;$('#pv').innerHTML='';if(photoP)photoP.then(r=>{$('#pv').innerHTML=r?`<img src="${r.thumb}" alt="Preview of selected photo" style="max-width:200px;border-radius:10px;margin-top:6px">`:'<small>This photo could not be read. You can still save the report without it.</small>'})});
+  on('#rf','submit',async e=>{e.preventDefault();
+    const v=id=>$('#'+id).value.trim(),bad=(id,m)=>{$(id).textContent=m;return !!m};
+    const a=bad('#e1',!v('loc')||!v('lm')?'Enter a locality and a landmark.':''),b=bad('#e2',v('desc').length<15?'Describe the issue in at least 15 characters.':''),c=bad('#e3',!validDate(v('date'))||v('date')>iso(0)?'Pick a valid date that is not in the future.':'');
+    if(a||b||c)return;
+    const btn=e.target.querySelector('button[type=submit]');btn.disabled=true;
+    const photo=photoP?await Promise.race([photoP,new Promise(r=>setTimeout(()=>r(null),4000))]):null;
+    const o={id:'LZ-'+Date.now().toString(36).toUpperCase()+Math.random().toString(36).slice(2,4).toUpperCase(),demo:false,type:v('type'),locality:v('loc'),landmark:v('lm'),severity:v('sev'),date:v('date'),desc:v('desc'),coords:v('coords'),photo};
+    store.obs.push(o);if(!save()&&o.photo){o.photo={name:o.photo.name};save()}
+    filt.type=filt.sev=filt.status='';if(filt.loc&&!sameLoc(filt.loc,o.locality))filt.loc=o.locality;
+    location.hash='#/done/'+o.id});
+}
+
+function route(){
+  const [p,q]=location.hash.slice(1).split('?'),parts=p.split('/'),pg=parts[1]||'';
+  if(filt.loc&&!localities().some(l=>sameLoc(l,filt.loc)))filt.loc='';
+  const views={h:()=>detail(dec(parts[2]||'')),report:()=>reportForm(new URLSearchParams(q||'').get('hs')),overview,done:()=>success(dec(parts[2]||'')),'':home};
+  $('#app').innerHTML=Object.hasOwn(views,pg)?views[pg]():'<section><div class="card">That page does not exist. <a href="#/">Back to dashboard</a></div></section>';
+  wire();
+}
+$('#reset').addEventListener('click',()=>{if(confirm('Reset all data? Your submitted reports will be deleted and the demo data restored.')){store=seed();save();location.hash='#/';route()}});
+addEventListener('hashchange',()=>{route();scrollTo(0,0)});route();
+</script></body></html>
